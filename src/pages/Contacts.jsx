@@ -1,4 +1,5 @@
 import ContactForm from "components/ContactForm";
+import ContactList from "components/ContactList/ContactList";
 import Container from "components/Container";
 import Filter from "components/Filter/Filter";
 import Modal from "components/Modal/Modal";
@@ -14,6 +15,7 @@ const Contacts = () => {
         <Container>
             <button type="button" onClick={toggleModal} aria-label="Add contact">Add contact</button>
             <Filter />
+            <ContactList />
             {isModalOpen && (
                 <Modal onClose={toggleModal}>
                     <ContactForm onSave={toggleModal} />
