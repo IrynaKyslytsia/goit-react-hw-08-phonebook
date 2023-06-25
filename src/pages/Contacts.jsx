@@ -1,6 +1,6 @@
 import ContactForm from "components/ContactForm";
 import ContactList from "components/ContactList/ContactList";
-import Container from "components/Container";
+import Container from "components/Container/Container";
 import Filter from "components/Filter/Filter";
 import Modal from "components/Modal/Modal";
 import { useState } from "react";

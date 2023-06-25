@@ -25,3 +25,9 @@ export const handlePending = state => {
     state.items.splice(index, 1);
     state.error = null;
   };
+
+  export const handleFulfilledLogOut = (state) => {
+      state.items = [];
+      state.error = null;
+      state.isLoading = false;
+  };

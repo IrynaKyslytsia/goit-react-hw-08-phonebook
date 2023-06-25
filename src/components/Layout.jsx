@@ -1,23 +1,21 @@
 
 import { Suspense } from "react";
-import Navigation from "./Navigation";
+
 import { Outlet } from "react-router-dom";
+import { AppBar } from "./AppBar/AppBar";
+import { Toaster } from "react-hot-toast";
+import Container from "./Container/Container";
 
 
 const Layout = () => {
     return (
-        <>
-            <header>
-                <Navigation />
-            </header>
-            <main>
-                <div>
-                <Suspense fallback={<div>Loading...</div>}>
-                    <Outlet />
-                </Suspense>
-                </div>
-            </main>
-        </>
+        <Container>
+            <AppBar />
+            <Suspense fallback={null}>
+                <Outlet />
+            </Suspense>
+            <Toaster position="top-right" reverseOrder={false} />
+        </Container>
     )
 };
 

@@ -21,7 +21,7 @@ const ContactForm = ({onSave}) => {
           return;
     };
 
-  dispatch(addContact({ name, phone: number }));
+  dispatch(addContact({ name, number: number }));
       form.reset();
       onSave()
     };  
