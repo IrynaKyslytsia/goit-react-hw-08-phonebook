@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/415.c500525b.chunk.js","mappings":"2JAQA,UANa,WACT,OACI,sCAEP,C","sources":["pages/Home.jsx"],"sourcesContent":["\n\nconst Home = () => {\n    return (\n        <div>Home page</div>\n    )\n};\n\nexport default Home;"],"names":[],"sourceRoot":""}
