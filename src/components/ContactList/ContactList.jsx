@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ContactListItem from "components/ContactListItem/ContactListItem";
 import { selectContacts, selectFilter } from "redux/contacts/selectors";
 import { getContacts } from "redux/contacts/operations";
+import css from './ContactList.module.css'
 
 const getFilteredContacts = (contacts, filter) => {
   const normilizedFilter = filter.toLowerCase();
@@ -22,12 +23,12 @@ const ContactList = () => {
   }, [dispatch])
 
     return (
-        <ul>
-            {visibleContacts.map(({ name, phone, id }) => (
+        <ul className={css.list}>
+            {visibleContacts.map(({ name, number, id }) => (
               <li key={id}>
                 <ContactListItem 
                 name={name}
-                number={phone}
+                number={number}
                 id={id}
                  />
               </li>

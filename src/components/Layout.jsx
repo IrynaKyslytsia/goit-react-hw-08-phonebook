@@ -8,10 +8,12 @@ const Layout = () => {
     return (
         <Container>
             <AppBar />
+            <main>
             <Suspense fallback={null}>
                 <Outlet />
             </Suspense>
             <Toaster position="top-right" reverseOrder={false} />
+            </main>
         </Container>
     )
 };
