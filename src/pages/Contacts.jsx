@@ -1,10 +1,9 @@
+import { useState } from "react";
 import ContactForm from "components/ContactForm/ContactForm";
 import ContactList from "components/ContactList/ContactList";
 import Container from "components/Container/Container";
 import Filter from "components/Filter/Filter";
 import Modal from "components/Modal/Modal";
-import { useState } from "react";
-
 
 const Contacts = () => {
 

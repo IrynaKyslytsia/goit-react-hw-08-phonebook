@@ -1,8 +1,6 @@
-
-
 const Home = () => {
     return (
-        <div>Home page</div>
+        <div>Your awesome Phonebook</div>
     )
 };
 

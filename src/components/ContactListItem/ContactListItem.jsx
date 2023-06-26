@@ -10,8 +10,8 @@ const ContactListItem = ({ name, number, id }) => {
         <>
             <p>{name}: {number}</p>
             <button 
-            type="button" 
-            onClick={() => {dispatch(deleteContact(id))}}>Delete</button>
+                type="submit" 
+                onClick={() => {dispatch(deleteContact(id))}}>Delete</button>
         </>
      );
         };

@@ -1,4 +1,3 @@
-
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
@@ -14,8 +13,6 @@ const ContactForm = ({onSave}) => {
       const form = e.target;
       const name = form.elements.name.value;
       const number = form.elements.number.value;
-      console.log(name)
-      console.log(number)
       
       if (contacts.items.find(contact => contact.name === name)) {
         alert(`${name} is already in contacts.`);
