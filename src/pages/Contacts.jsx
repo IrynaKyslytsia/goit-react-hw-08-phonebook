@@ -24,7 +24,7 @@ const Contacts = () => {
     return (
         <>
             <Helmet>
-                <title>Your contacts</title>
+                <title>Contacts</title>
             </Helmet>
             <AddButton onClick={toggleModal} />
             <Filter />
