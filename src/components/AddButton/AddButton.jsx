@@ -1,4 +1,4 @@
-import { AiOutlinePlus } from 'react-icons/ai';
+import { BsPersonFillAdd } from 'react-icons/bs';
 import css from './AddButton.module.css'
 
 const AddButton = ({onClick}) => {
@@ -7,7 +7,7 @@ const AddButton = ({onClick}) => {
             type="button" 
             onClick={onClick} 
             aria-label="Add contact">
-                <AiOutlinePlus width='24' height='24' fill='white' />
+                <BsPersonFillAdd fill='white' />
         </button>
     )
 };
