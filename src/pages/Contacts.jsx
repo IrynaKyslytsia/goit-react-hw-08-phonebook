@@ -27,7 +27,7 @@ const Contacts = () => {
                 <title>Contacts</title>
             </Helmet>
             <AddButton onClick={toggleModal} />
-            <Filter />
+            {contacts.items.length > 0 && <Filter />}
             {contacts.items.length > 0 ? <ContactList /> : <div>There are no contacts...</div>}
             {isModalOpen && (
                 <Modal onClose={toggleModal}>

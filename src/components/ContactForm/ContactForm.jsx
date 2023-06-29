@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
 import css from './ContactForm.module.css';
+import { toast } from 'react-hot-toast';
 
 const ContactForm = ({onSave}) => {
   const dispatch = useDispatch();
@@ -15,11 +16,12 @@ const ContactForm = ({onSave}) => {
       const number = form.elements.number.value;
       
       if (contacts.items.find(contact => contact.name === name)) {
-        alert(`${name} is already in contacts.`);
+        toast.error(`${name} is already in contacts.`);
           return;
     };
 
   dispatch(addContact({ name, number: number }));
+      toast.success(`Contact ${name} added to the list`)
       form.reset();
       onSave()
     };  

@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 
 const styles = {
     container: {
-      minHeight: 'calc(100vh - 50px)',
+      minHeight: 'calc(100vh - 80px)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
