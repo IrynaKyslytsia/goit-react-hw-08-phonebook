@@ -8,11 +8,21 @@ const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
     return (
       <nav>
-        <NavLink className={css.link} to="/">
+        <NavLink 
+        className={css.link}
+        style={({ isActive }) => ({
+          color: isActive ? '#F07F2E' : '#2C2C2C',
+        })}
+        to="/">
           Home
         </NavLink>
       {isLoggedIn && (
-        <NavLink className={css.link} to="/contacts">
+        <NavLink 
+        className={css.link}
+        style={({ isActive }) => ({
+          color: isActive ? '#F07F2E' : '#2C2C2C',
+        })}
+        to="/contacts">
           Contacts
         </NavLink>
       )}
