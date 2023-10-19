@@ -2,7 +2,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteContact } from "redux/contacts/operations";
 import css from './ContactListItem.module.css'
-import { BsPersonFill } from "react-icons/bs";
+import { BsFilePerson } from "react-icons/bs";
+import { MdDeleteOutline, MdEdit } from "react-icons/md"
 import { toast } from "react-hot-toast";
 
 const ContactListItem = ({ name, number, id }) => {
@@ -10,13 +11,20 @@ const ContactListItem = ({ name, number, id }) => {
 
     return (
         <div className={css.wrapper}>
-            {<BsPersonFill />}
+            {<BsFilePerson />}
             <p className={css.text}>{name}: {number}</p>
-            <button className={css.button}
-                type="submit" 
-                onClick={() => {dispatch(deleteContact(id))
-                    toast(`🗑️ Contact ${name} delited`);
-                      }}>Delete</button>
+            <div className={css.buttonWrapper}>
+                <button className={css.button}>
+                    <MdEdit />
+                </button>
+                <button className={css.button}
+                    type="submit" 
+                    onClick={() => {dispatch(deleteContact(id))
+                        toast(`🗑️ Contact ${name} delited`);
+                    }}>
+                    <MdDeleteOutline />
+                </button>
+            </div>
         </div>
      );
         };

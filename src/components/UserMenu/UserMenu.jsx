@@ -1,3 +1,4 @@
+import { FiLogOut } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/auth/selectors";
 import { logOut } from "redux/auth/operations";
@@ -10,8 +11,11 @@ const UserMenu = () => {
   return (
     <div className={css.wrapper}>
       <p className={css.username}>Welcome, {user.name}</p>
-      <button className={css.button} type="submit" onClick={() => dispatch(logOut())}>
-        Logout
+      <button className={css.button}
+          type="submit"
+          onClick={() => dispatch(logOut())}
+          aria-label="Logout">
+              <FiLogOut />
       </button>
     </div>
   );

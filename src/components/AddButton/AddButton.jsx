@@ -1,4 +1,4 @@
-import { BsPersonFillAdd } from 'react-icons/bs';
+import { RiUserAddLine } from 'react-icons/ri';
 import css from './AddButton.module.css'
 
 const AddButton = ({onClick}) => {
@@ -7,7 +7,7 @@ const AddButton = ({onClick}) => {
             type="button" 
             onClick={onClick} 
             aria-label="Add contact">
-                <BsPersonFillAdd fill='white' />
+                <RiUserAddLine fill='white' />
         </button>
     )
 };
