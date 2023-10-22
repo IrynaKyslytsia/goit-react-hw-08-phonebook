@@ -25,6 +25,18 @@ export const handlePending = state => {
     state.items.splice(index, 1);
     state.error = null;
   };
+  
+  export const handleFulfilledUpdate = (state, { payload }) => {
+      state.isLoading = false;
+        state.items.map(item => {
+          if (item.id === payload.id) {
+            item.name = payload.name;
+            item.number = payload.number;
+          }
+          return item;
+        });
+      state.error = null;
+  };
 
   export const handleFulfilledLogOut = (state) => {
       state.items = [];
